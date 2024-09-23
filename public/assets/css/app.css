@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    background-color: black;
+    background-image: url("/assets/images/background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Figtree;
+    color: #9ca3af;
+}
+
+.box-login {
+    background-color: rgba(255, 212, 212, 0.5);
+    width: 80%;
+    padding: 1rem;
+    border-radius: 10px;
+}
