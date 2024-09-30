@@ -13,18 +13,15 @@ return new class extends Migration
     {
         Schema::create('community_members', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('community_id');
-            $table->string('nisn');
+            $table->foreignId('community_id')->constrained()->onDelete('cascade');
+            $table->string('nisn')->unique();
             $table->string('name');
-            $table->unsignedBigInteger('vocation_id');
+            $table->foreignId('vocation_id')->constrained()->onDelete('cascade');
             $table->string('class_name');
             $table->integer('class_grade');
             $table->boolean('active');
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreign('community_id')->references('id')->on('communities');
-            $table->foreign('vocation_id')->references('id')->on('vocations');
         });
     }
 

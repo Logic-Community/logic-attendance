@@ -14,11 +14,26 @@ class VocationSeeder extends Seeder
     public function run(): void
     {
         $vocations = [
-            ['name' => 'Mekatronika'],
-            ['name' => 'PPLG'],
-            ['name' => 'DKV'],
-            ['name' => 'Kimia Industri'],
-            ['name' => 'Permesinan'],
+            [
+                'code' => 'MEKA',
+                'name' => 'Mekatronika'
+            ],
+            [
+                'code' => 'PPLG',
+                'name' => 'Pemodelan Perangkat Lunak dan Gim'
+            ],
+            [
+                'code' => 'DKV',
+                'name' => 'Desain Komunikasi Visual'
+            ],
+            [
+                'code' => 'KI',
+                'name' => 'Kimia Industri'
+            ],
+            [
+                'code' => 'TM',
+                'name' => 'Teknik Mesin'
+            ],
         ];
 
         Vocation::insert($vocations);
