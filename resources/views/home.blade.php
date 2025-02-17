@@ -15,28 +15,18 @@
 </head>
 <body>
     <div class="container">
-        <div class="vh-100 d-flex flex-column justify-content-center align-items-center">
-            <h1 class="text-center text-white pb-2">
-                LOGIC COMMUNITY
-            </h1>
-
-            <div class="box-login text-black mx-auto">
-                <div class="form-group">
-                    <label for="nisn">NISN</label>
-                    <input type="text" class="form-control" id="nisn" aria-describedby="nisnHelp" placeholder="Enter your NISN">
-                    <small id="nisnHelp" class="form-text text-muted">Make sure to enter your NISN correctly.</small>
-                </div>
-                <div class="form-group mt-2">
-                    <label for="roomCode">Room Code</label>
-                    <input type="text" class="form-control" id="roomCode" placeholder="Enter the Room Code">
-                </div>
-                <div class="d-grid gap-2 col-6 mx-auto mt-4">
-                    <button class="btn btn-primary" type="button">Enroll</button>
-                </div>
-            </div>
+        <div class="login-box">
+            <h1>Welcome</h1>
+            <p>Logic member!</p>
+            <form id="loginForm">
+                <input type="number" id="nisn" placeholder="NISN" required>
+                <input type="number" id="roomCode" placeholder="Room Code" required>
+                <button type="submit">Enroll Now</button>
+            </form>
         </div>
     </div>
 
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/enroll.js') }}"></script>
 </body>
 </html>
